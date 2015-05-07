@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2013Limited\InstallShield.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\Forms\AccessionForm\AccessionForm\AccessionForm.csproj">
+			<Name>AccessionForm</Name>
+			<Project>{BCCFBD55-5BBE-449B-A345-D178F20E0567}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Wizards\AccessionWizard\AccessionWizard\AccessionWizard.csproj">
+			<Name>AccessionWizard</Name>
+			<Project>{6408A4DC-7F51-474A-949F-33C422E9FF4D}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Wizards\CooperatorWizard\CooperatorWizard.csproj">
+			<Name>CooperatorWizard</Name>
+			<Project>{428F072A-FC3C-4577-8D16-CA01CB252C81}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\GrinGlobal.Client.Common\GrinGlobal.Client.Common\GRINGlobal.Client.Common.csproj">
+			<Name>GRINGlobal.Client.Common</Name>
+			<Project>{0712739D-AC8D-4FE3-8ABB-3857C2F4A3AA}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\GRINGlobal.Client.CuratorTool\GRINGlobal.Client.CuratorTool\GRINGlobal.Client.CuratorTool.csproj">
+			<Name>GRINGlobal.Client.CuratorTool</Name>
+			<Project>{4D333DCE-9F04-4DEC-8DF2-78D6988F5CD9}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\GRINGlobal.Client.SearchTool\GRINGlobal.Client.SearchTool\GRINGlobal.Client.SearchTool.csproj">
+			<Name>GRINGlobal.Client.SearchTool</Name>
+			<Project>{FF7A209A-138F-4EAA-AC56-0C4E68D0214D}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Forms\ImageForm\ImageForm\ImageForm.csproj">
+			<Name>ImageForm</Name>
+			<Project>{7C03C643-4AB4-46AE-8D7E-E8ADDA7649F3}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Forms\InventoryForm\InventoryForm\InventoryForm.csproj">
+			<Name>InventoryForm</Name>
+			<Project>{683D3260-E354-4D99-A2F4-0FA0C035A7E7}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Forms\OrderForm\OrderForm\OrderForm.csproj">
+			<Name>OrderForm</Name>
+			<Project>{D56C197E-2EFF-4926-A08B-910463174B15}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\Wizards\OrderWizard\OrderWizard\OrderWizard.csproj">
+			<Name>OrderWizard</Name>
+			<Project>{A882D734-D65D-4916-9985-C381E71441F1}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

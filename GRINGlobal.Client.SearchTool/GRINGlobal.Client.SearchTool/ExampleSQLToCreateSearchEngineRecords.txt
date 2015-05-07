@@ -1,0 +1,59 @@
+// Example SQL from GQUERY...
+select PROD.ACC.ACID 
+from PROD.ACC,PROD.ACC_ORIGIN,PROD.IV,PROD.OB,PROD.DSC,PROD.QUAL,PROD.EVAL 
+WHERE PROD.ACC_ORIGIN.ACID = PROD.ACC.ACID 
+AND PROD.ACC_ORIGIN.COUNTRY = 'United States' 
+AND PROD.IV.ACID = PROD.ACC.ACID 
+AND PROD.IV.STATUS = 'AVAIL' 
+AND PROD.OB.ACID = PROD.ACC.ACID 
+AND PROD.DSC.DNO = PROD.OB.DNO 
+AND PROD.QUAL.QNO(+) = PROD.OB.QNO 
+AND PROD.EVAL.ENO = PROD.OB.ENO 
+AND PROD.OB.ACID IN( SELECT PROD.OB.ACID FROM PROD.OB WHERE PROD.ob.dno = 89035 and PROD.ob.ob = '1' and PROD.ob.freq > '90'  
+			INTERSECT   SELECT PROD.OB.ACID FROM PROD.OB WHERE PROD.ob.dno = 89027 and PROD.ob.ob = 'B' and PROD.ob.freq = '100') 
+AND PROD.OB.DNO IN(89035,89027)
+
+
+// SQL to insert 'DEU' prod.iv records into friendly_field using 'ENG' records...
+insert into sec_resultset_field_friendly
+(sec_resultset_field_id, language_code, friendly_field_name)
+SELECT sec_resultset_field_id, 'DEU', friendly_field_name
+FROM sec_resultset_field_friendly
+WHERE language_code = 'ENG'
+
+// SQL to insert prod.acc records into the friendly_field using data from resultset_field table...
+insert into sec_resultset_field_friendly
+(sec_resultset_field_id, language_code, friendly_field_name)
+SELECT sec_resultset_field_id, 'ENG', programmatic_field_name
+FROM sec_resultset_field
+WHERE programmatic_resultset_name = 'PROD.ACC'
+
+// SQL to join sec.* tables to get table/field data for search engine...
+select
+srf.sec_resultset_field_id,
+saf.sec_actual_field_id,
+srf.programmatic_resultset_name,
+saf.actual_table_name,
+srf.programmatic_field_name,
+saf.actual_field_name,
+saf.actual_field_purpose,
+coalesce(saf.actual_field_type, 'STRING') as actual_field_type,
+coalesce(srff.friendly_field_name, srf.programmatic_field_name) as friendly_field_name
+from
+sec_resultset_field srf
+inner join sec_actual_field saf
+on srf.sec_actual_field_id = saf.sec_actual_field_id
+left join sec_resultset_field_friendly srff
+on srff.sec_resultset_field_id = srf.sec_resultset_field_id
+and coalesce(srff.language_code,'') = coalesce('ENG','')
+where
+srf.programmatic_resultset_name = coalesce('PROD.IV', srf.programmatic_resultset_name)
+and saf.actual_field_purpose = coalesce('', saf.actual_field_purpose)
+
+
+// SQL to add integer combobox records for string combobox records...
+insert into prod.resource (language_code, resource_name, display_member, value_member, sort_order)
+select language_code, 'cboNumberOperators', display_member, value_member, sort_order
+from prod.resource
+where language_code = 'ENG' and resource_name = 'cboStringOperators'
+

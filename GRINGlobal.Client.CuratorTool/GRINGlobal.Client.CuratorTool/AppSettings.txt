@@ -1,0 +1,106 @@
+#
+# This is a sample AppSettings file used by the GRIN-Global Curator Tool application.
+#
+# This file contains settings used by the Curator Tool for customized behavior tailored 
+# to the users needs.  Each entry should be kept on an individual line. 
+# The setting name should be placed in the first column followed by an equal sign (=)
+# and then followed by the corresponding value of that setting.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines denoted by a '#' symbol at the beginning of the line.
+#
+# Here are some example treeview friendly name formulas:
+#
+#      ORDER_REQUEST_ITEM_ID_NAME_FORMULA = {get_order_request_item.sequence_number} + " - " + {get_order_request_item.external_taxonomy}
+#      TAXONOMY_SPECIES_ID_NAME_FORMULA = {get_taxonomy_species.name} + " - " + {get_taxonomy_species.name_authority}
+#
+#
+# And here are some example treeview virtual node definitions:
+#      TAXONOMY_GENUS_ID_VIRTUAL_NODE_DATAVIEW = get_taxonomy_species
+#      CROP_ID_VIRTUAL_NODE_DATAVIEW = get_crop_trait
+#
+#
+# And finally, here are some example misc. application setting definitions:
+#      ux_numericupdownMaxRowsReturned = 10000
+#      ux_numericupdownQueryPageSize = 1000
+#      ux_checkboxOptimizeLUTForSpeed = true
+
+
+# Friendly Names...
+#ACCESSION_ACTION_ID_NAME_FORMULA = {get_accession_action.accession_id} + " - " + {get_accession_action.action_name_code} + " - " + {get_accession_action.started_date} + " - " + {get_accession_action.completed_date}
+#ACCESSION_ID_NAME_FORMULA = {get_accession.accession_number_part1} + "_" + {get_accession.accession_number_part2} + "_" + {get_accession.accession_number_part3}
+#ACCESSION_INV_ANNOTATION_ID_NAME_FORMULA = {get_accession_inv_annotation.inventory_id} + " - " + {get_accession_inv_annotation.annotation_type_code} + " - " + {get_accession_inv_annotation.annotation_date}
+#ACCESSION_INV_ATTACH_ID_NAME_FORMULA = {get_accession_inv_attach.inventory_id} + " - " + {get_accession_inv_attach.virtual_path}
+#ACCESSION_INV_GROUP_ID_NAME_FORMULA = {get_accession_inv_group.group_name}
+#ACCESSION_INV_GROUP_MAP_ID_NAME_FORMULA = {get_accession_inv_group_map.inventory_id} + " - " + {get_accession_inv_group_map.accession_inv_group_id}
+#ACCESSION_INV_NAME_ID_NAME_FORMULA = {get_accession_inv_name.inventory_id} + " - " + {get_accession_inv_name.plant_name} + " - " + {get_accession_inv_name.name_group_id} + " - " + {get_accession_inv_name.category_code}
+#ACCESSION_INV_VOUCHER_ID_NAME_FORMULA = {get_accession_inv_voucher.inventory_id} + " - " + {get_accession_inv_voucher.voucher_location} + " - " + {get_accession_inv_voucher.vouchered_date}
+#ACCESSION_IPR_ID_NAME_FORMULA = {get_accession_ipr.accession_id} + " - " + {get_accession_ipr.type_code} + " - " + {get_accession_ipr.ipr_number}
+#ACCESSION_PEDIGREE_ID_NAME_FORMULA = {get_accession_pedigree.accession_id}
+#ACCESSION_QUARANTINE_ID_NAME_FORMULA = {get_accession_quarantine.accession_id} + " - " + {get_accession_quarantine.quarantine_type_code}
+#ACCESSION_SOURCE_ID_NAME_FORMULA = {get_accession_source.accession_id} + " - " + {get_accession_source.source_type_code} + " - " + {get_accession_source.source_date}
+#ACCESSION_SOURCE_MAP_ID_NAME_FORMULA = {get_accession_source_cooperator.accession_id} + " - " + {get_accession_source_cooperator.cooperator_id}
+#CITATION_ID_NAME_FORMULA = {get_citations.literature_id} + " - " + {get_citations.citation_year} + " - " + {get_citations.reference}
+#CODE_VALUE_ID_NAME_FORMULA = {get_code_value.group_name} + " - " + {get_code_value.value}
+#CODE_VALUE_LANG_ID_NAME_FORMULA = {get_code_value_lang.code_value_id} + " - " + {get_code_value_lang.sys_lang_id}
+#COOPERATOR_GROUP_ID_NAME_FORMULA = {get_cooperator_group.name}
+#COOPERATOR_ID_NAME_FORMULA = {get_cooperator.last_name} + " - " + {get_cooperator.first_name} + " - " + {get_cooperator.organization} + " - " + {get_cooperator.geography_id} + " - " + {get_cooperator.address_line1}
+#COOPERATOR_MAP_ID_NAME_FORMULA = {get_cooperator_map.cooperator_id} + " - " + {get_cooperator_map.cooperator_group_id}
+#CROP_ATTACH_ID_NAME_FORMULA = {get_crop_attach.crop_id} + " - " + {get_crop_attach.virtual_path}
+#CROP_ID_NAME_FORMULA = {get_crop.name}
+#CROP_TRAIT_ATTACH_ID_NAME_FORMULA = {get_crop_trait_attach.crop_trait_id} + " - " + {get_crop_trait_attach.virtual_path}
+#CROP_TRAIT_CODE_ATTACH_ID_NAME_FORMULA = {get_crop_trait_code_attach.crop_trait_code_id} + " - " + {get_crop_trait_code_attach.virtual_path}
+#CROP_TRAIT_CODE_ID_NAME_FORMULA = {get_crop_trait_code.crop_trait_id} + " - " + {get_crop_trait_code.code}
+#CROP_TRAIT_CODE_LANG_ID_NAME_FORMULA = {get_crop_trait_code_lang.crop_trait_code_id} + " - " + {get_crop_trait_code_lang.sys_lang_id}
+#CROP_TRAIT_ID_NAME_FORMULA = {get_crop_trait.title}
+#CROP_TRAIT_LANG_ID_NAME_FORMULA = {get_crop_trait_lang.crop_trait_id} + " - " + {get_crop_trait_lang.sys_lang_id}
+#CROP_TRAIT_OBSERVATION_DATA_ID_NAME_FORMULA = {get_crop_trait_observation_data.crop_trait_observation_id} + " - " + {get_crop_trait_observation_data.inventory_id} + " - " + {get_crop_trait_observation_data.crop_trait_id} + " - " + {get_crop_trait_observation_data.crop_trait_code_id} + " - " + {get_crop_trait_observation_data.numeric_value} + " - " + {get_crop_trait_observation_data.string_value} + " - " + {get_crop_trait_observation_data.string_value}
+#CROP_TRAIT_OBSERVATION_ID_NAME_FORMULA = {get_crop_trait_observation.inventory_id} + " - " + {get_crop_trait_observation.crop_trait_id} + " - " + {get_crop_trait_observation.crop_trait_code_id} + " - " + {get_crop_trait_observation.numeric_value} + " - " + {get_crop_trait_observation.string_value} + " - " + {get_crop_trait_observation.method_id}
+#GENETIC_ANNOTATION_ID_NAME_FORMULA = {get_genetic_annotation.genetic_marker_id} + " - " + {get_genetic_annotation.method_id}
+#GENETIC_MARKER_ID_NAME_FORMULA = {get_genetic_marker.crop_id} + " - " + {get_genetic_marker.name}
+#GENETIC_OBSERVATION_DATA_ID_NAME_FORMULA = {get_genetic_observation_data.genetic_annotation_id} + " - " + {get_genetic_observation_data.inventory_id} + " - " + {get_genetic_observation_data.individual} + " - " + {get_genetic_observation_data.individual_allele_number}
+#GENETIC_OBSERVATION_ID_NAME_FORMULA = {get_genetic_observation.inventory_id}
+#GEOGRAPHY_ID_NAME_FORMULA = {get_geography.country_code} + " - " + {get_geography.adm1} + " - " + {get_geography.adm2} + " - " + {get_geography.adm3} + " - " + {get_geography.adm4}
+#GEOGRAPHY_REGION_MAP_ID_NAME_FORMULA = {get_geography_region_map.geography_id} + " - " + {get_geography_region_map.redion_id}
+#INVENTORY_ACTION_ID_NAME_FORMULA = {get_inventory_action.action_name_code} + " - " + {get_inventory_action.action_date}
+#INVENTORY_ID_NAME_FORMULA = {get_inventory.inventory_number_part1} + "_" + {get_inventory.inventory_number_part2} + "_" + {get_inventory.inventory_number_part3} + "_" + {get_inventory.form_type_code}
+#INVENTORY_MAINT_POLICY_ID_NAME_FORMULA = {get_inventory_maint_policy.maintenance_name}
+#INVENTORY_QUALITY_STATUS_ID_NAME_FORMULA = {get_inventory_quality_status.inventory_id} + " - " + {get_inventory_quality_status.test_type_code} + " - " + {get_inventory_quality_status.contaminant_code} + " - " + {get_inventory_quality_status.started_date}
+#INVENTORY_VIABILITY_DATA_ID_NAME_FORMULA = {get_inventory_viability_data.inventory_viability_id} + " - " + {get_inventory_viability_data.replication_number} + " - " + {get_inventory_viability_data.count_number}
+#INVENTORY_VIABILITY_ID_NAME_FORMULA = {get_inventory_viability.inventory_id} + " - " + {get_inventory_viability.inventory_viability_rule_id} + " - " + {get_inventory_viability.tested_date} + " - " + {get_inventory_viability.tested_date_code}
+#INVENTORY_VIABILITY_RULE_ID_NAME_FORMULA = {get_inventory_viability_rule.taxonomy_species_id} + " - " + {get_inventory_viability_rule.name}
+#LITERATURE_ID_NAME_FORMULA = {get_literature.abbreviation}
+#METHOD_COOPERATOR_MAP_ID_NAME_FORMULA = {get_method_cooperator.cooperator_id} + " - " + {get_method_cooperator.method_id}
+#METHOD_ID_NAME_FORMULA = {get_method.name}
+#NAME_GROUP_ID_NAME_FORMULA = {get_name_group.group_name}
+#ORDER_REQUEST_ACTION_ID_NAME_FORMULA = {get_order_request_action.order_request_id} + " - " + {get_order_request_action.action_name_code} + " - " + {get_order_request_action.started_date}
+#ORDER_REQUEST_ATTACH_ID_NAME_FORMULA = {get_order_request_attach.order_request_id} + " - " + {get_order_request_attach.virtual_path}
+#ORDER_REQUEST_ID_NAME_FORMULA = {get_order_request.order_request_id}
+#ORDER_REQUEST_ITEM_ID_NAME_FORMULA = {get_order_request_item.order_request_id} + " - " + {get_order_request_item.sequence_number}
+#REGION_ID_NAME_FORMULA = {get_region.continent} + " - " + {get_region.subcontinent}
+#SITE_ID_NAME_FORMULA = {get_site.site_short_name} + " - " + {get_site.site_long_name} + " - " + {get_site.organization_abbrev} + " - " + {get_site.fao_institute_number}
+#TAXONOMY_ALT_FAMILY_MAP_ID_NAME_FORMULA = {get_taxonomy_alt_family_map.taxonomy_genus_id} + " - " + {get_taxonomy_alt_family_map.taxonomy_family_id}
+#TAXONOMY_ATTACH_ID_NAME_FORMULA = {get_taxonomy_attach.taxonomy_family_id} + " - " + {get_taxonomy_attach.taxonomy_genus_id} + " - " + {get_taxonomy_attach.taxonomy_species_id} + " - " + {get_taxonomy_attach.virtual_path}
+#TAXONOMY_AUTHOR_ID_NAME_FORMULA = {get_taxonomy_author.short_name}
+#TAXONOMY_COMMON_NAME_ID_NAME_FORMULA = {get_taxonomy_common_name.taxonomy_genus_id} + " - " + {get_taxonomy_common_name.taxonomy_species_id} + " - " + {get_taxonomy_common_name.language_description} + " - " + {get_taxonomy_common_name.name}
+#TAXONOMY_CROP_MAP_ID_NAME_FORMULA = {get_taxonomy_crop_map.taxonomy_species_id} + " - " + {get_taxonomy_crop_map.crop_id} + " - " + {get_taxonomy_crop_map.alternate_crop_name} + " - " + {get_taxonomy_crop_map.common_crop_name} + " - " + {get_taxonomy_crop_map.is_primary_genepool} + " - " + {get_taxonomy_crop_map.is_secondary_genepool} + " - " + {get_taxonomy_common_name.} + " - " + {get_taxonomy_common_name.}
+#TAXONOMY_FAMILY_ID_NAME_FORMULA = {get_taxonomy_family.family_name} + " - " + {get_taxonomy_family.author_name} + " - " + {get_taxonomy_family.subfamily_name} + " - " + {get_taxonomy_family.tribe_name} + " - " + {get_taxonomy_family.subtribe_name}
+#TAXONOMY_GENUS_ID_NAME_FORMULA = {get_taxonomy_genus.taxonomy_family_id} + " - " + {get_taxonomy_genus.genus_name} + " - " + {get_taxonomy_genus.genus_authority} + " - " + {get_taxonomy_genus.subgenus_name} + " - " + {get_taxonomy_genus.section_name} + " - " + {get_taxonomy_genus.series_name} + " - " + {get_taxonomy_genus.series_name}
+#TAXONOMY_GEOGRAPHY_MAP_ID_NAME_FORMULA = {get_taxonomy_geography_map.taxonomy_species_id} + " - " + {get_taxonomy_geography_map.geography_id} + " - " + {get_taxonomy_geography_map.geography_status_code}
+#TAXONOMY_NOXIOUS_ID_NAME_FORMULA = {get_taxonomy_noxious.taxonomy_species_id} + " - " + {get_taxonomy_noxious.geography_id} + " - " + {get_taxonomy_noxious.noxious_type_code}
+#TAXONOMY_SPECIES_ID_NAME_FORMULA = {get_taxonomy_species.name} + " - " + {get_taxonomy_species.name_authority}
+#TAXONOMY_USE_ID_NAME_FORMULA = {get_taxonomy_use.taxonomy_species_id} + " - " + {get_taxonomy_use.economic_usage_code} + " - " + {get_taxonomy_use.usage_type}
+#WEB_COOPERATOR_ID_NAME_FORMULA = {get_web_cooperator.last_name} + " - " + {get_web_cooperator.first_name} + " - " + {get_web_cooperator.organization} + " - " + {get_web_cooperator.geography_id} + " - " + {get_web_cooperator.address_line1}
+#WEB_ORDER_REQUEST_ID_NAME_FORMULA = {get_web_order_request.web_cooperator_id} + " - " + {get_web_order_request.ordered_date}
+#WEB_ORDER_REQUEST_ITEM_ID_NAME_FORMULA = {get_web_order_request_item.web_order_request_id} + " - " + {get_web_order_request_item.web_cooperator_id} + " - " + {get_web_order_request_item.sequence_number}
+
+
+# Virtual Node Dataviews...
+#TAXONOMY_GENUS_ID_VIRTUAL_NODE_DATAVIEW = get_taxonomy_species
+#CROP_ID_VIRTUAL_NODE_DATAVIEW = get_crop_trait
+#INVENTORY_ID_VIRTUAL_NODE_DATAVIEW = get_inventory_action
+
+# Order Wizard Crystal Reports...
+#OrderWizardCrystalReports = Order-Packing by Accession.rpt; Order-Packing by Inventory with Origin.rpt; Order-Packing by Inventory.rpt; Order-Packing General.rpt; Order-Packing Inventory by Accession.rpt; Order-Packing Picking List by Inventory.rpt; Order-Packing Picking List by Plant.rpt; Order-Packing NSGC.rpt; 3x3_Packet_Label.rpt
+
+

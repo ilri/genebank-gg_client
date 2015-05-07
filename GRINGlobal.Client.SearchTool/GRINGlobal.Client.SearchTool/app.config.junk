@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="GRINGlobal.SearchTool.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <applicationSettings>
+        <GRINGlobal.SearchTool.Properties.Settings>
+            <setting name="GRINGlobal_SearchTool_GRINGlobalGUIWebServices_GUI"
+                serializeAs="String">
+                <value>http://grin-global-test1.agron.iastate.edu/gringlobal/gui.asmx</value>
+            </setting>
+        </GRINGlobal.SearchTool.Properties.Settings>
+    </applicationSettings>
+</configuration>

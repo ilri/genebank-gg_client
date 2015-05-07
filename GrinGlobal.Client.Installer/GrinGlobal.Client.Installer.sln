@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GrinGlobal.Client.Installer", "GrinGlobal.Client.Installer\GrinGlobal.Client.Installer.vdproj", "{1DB566C3-6ECE-42B1-B3FF-AE7D4E66FAAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DB566C3-6ECE-42B1-B3FF-AE7D4E66FAAC}.Debug|Default.ActiveCfg = Debug
+		{1DB566C3-6ECE-42B1-B3FF-AE7D4E66FAAC}.Debug|Default.Build.0 = Debug
+		{1DB566C3-6ECE-42B1-B3FF-AE7D4E66FAAC}.Release|Default.ActiveCfg = Release
+		{1DB566C3-6ECE-42B1-B3FF-AE7D4E66FAAC}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

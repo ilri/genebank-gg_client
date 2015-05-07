@@ -1,0 +1,38 @@
+select
+srf.sec_resultset_field_id,
+saf.sec_actual_field_id,
+srf.programmatic_resultset_name,
+saf.actual_table_name,
+srf.programmatic_field_name,
+saf.actual_field_name,
+saf.actual_field_purpose,
+coalesce(saf.actual_field_type, 'STRING') as actual_field_type,
+coalesce(srff.friendly_field_name, srf.programmatic_field_name) as friendly_field_name
+from
+sec_rs_field srf
+inner join sec_table_field saf
+on srf.sec_actual_field_id = saf.sec_actual_field_id
+left join sec_resultset_field_friendly srff
+on srff.sec_resultset_field_id = srf.sec_resultset_field_id
+and coalesce(srff.language_code,'') = coalesce('ENG','')
+
+
+
+
+-- This works as of 11-11-2008
+select
+  sr.rs_name as programmatic_resultset_name,
+  coalesce(srff.friendly_field_name, srf.field_name) as friendly_field_name,
+  st.table_name as actual_table_name,
+  stf.field_name as actual_field_name,
+  stf.field_type as actual_field_type
+from
+  sec_rs_field srf
+  left join sec_rs sr
+   on srf.sec_rs_id = sr.sec_rs_id
+  left join sec_rs_field_friendly srff
+   on (srf.sec_rs_field_id = srff.sec_rs_field_id and srff.language_code = 'ENG')
+  left join sec_table_field stf
+   on srf.sec_table_field_id = stf.sec_table_field_id
+  left join sec_table st
+   on stf.sec_table_id = st.sec_table_id

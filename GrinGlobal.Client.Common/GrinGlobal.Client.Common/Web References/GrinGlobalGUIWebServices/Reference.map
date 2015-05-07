@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://npgsdev.ars-grin.gov/GRINGlobal/GUI.asmx?wsdl" filename="GUI.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://npgsdev.ars-grin.gov/GRINGlobal/GUI.asmx?disco" filename="GUI.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

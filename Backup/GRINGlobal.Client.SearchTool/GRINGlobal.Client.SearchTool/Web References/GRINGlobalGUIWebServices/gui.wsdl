@@ -1,0 +1,1970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="http://tempuri.org/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataviewName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="delimitedParameterList" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="offset" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="limit" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="options" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLookupTableStats">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tableName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLookupTableStatsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLookupTableStatsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllLookupTableStats">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllLookupTableStatsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllLookupTableStatsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataParameterTemplate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataviewName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataParameterTemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataParameterTemplateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearCache">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cacheName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearCacheResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ClearCacheResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransferOwnership">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="newOwnerCooperatorID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeDescendents" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransferOwnershipResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransferOwnershipResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Search">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="query" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ignoreCase" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="andTermsTogether" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="indexList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="resolverName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="offset" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="limit" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="options" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateLoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="targetUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangePasswordResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeLanguage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="newLanguageID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeLanguageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeLanguageResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenameList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="existingGroupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newGroupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="existingTabName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newTabName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cooperatorID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenameListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RenameListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenameTab">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="existingTabName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="newTabName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cooperatorID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenameTabResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RenameTabResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tabName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="cooperatorID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="options" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SaveDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteImageResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appOrDocRelativePath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadImageResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="appOrDocRelativePath" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="imageBytes" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="createThumbnail" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="overwriteIfExists" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadImageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="versionName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="onlyAvailable" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="onlyLatest" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSearchEngineInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="enabledIndexesOnly" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSearchEngineInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSearchEngineInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResolveUniqueKeys">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="suppressExceptions" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="userName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="options" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResolveUniqueKeysResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ResolveUniqueKeysResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="base64Binary" nillable="true" type="s:base64Binary" />
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLookupTableStatsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLookupTableStats" />
+  </wsdl:message>
+  <wsdl:message name="GetLookupTableStatsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLookupTableStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLookupTableStatsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllLookupTableStats" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLookupTableStatsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllLookupTableStatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataParameterTemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataParameterTemplate" />
+  </wsdl:message>
+  <wsdl:message name="GetDataParameterTemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataParameterTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearCacheSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearCache" />
+  </wsdl:message>
+  <wsdl:message name="ClearCacheSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransferOwnershipSoapIn">
+    <wsdl:part name="parameters" element="tns:TransferOwnership" />
+  </wsdl:message>
+  <wsdl:message name="TransferOwnershipSoapOut">
+    <wsdl:part name="parameters" element="tns:TransferOwnershipResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapIn">
+    <wsdl:part name="parameters" element="tns:Search" />
+  </wsdl:message>
+  <wsdl:message name="SearchSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateLogin" />
+  </wsdl:message>
+  <wsdl:message name="ValidateLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeLanguageSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeLanguage" />
+  </wsdl:message>
+  <wsdl:message name="ChangeLanguageSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="RenameListSoapIn">
+    <wsdl:part name="parameters" element="tns:RenameList" />
+  </wsdl:message>
+  <wsdl:message name="RenameListSoapOut">
+    <wsdl:part name="parameters" element="tns:RenameListResponse" />
+  </wsdl:message>
+  <wsdl:message name="RenameTabSoapIn">
+    <wsdl:part name="parameters" element="tns:RenameTab" />
+  </wsdl:message>
+  <wsdl:message name="RenameTabSoapOut">
+    <wsdl:part name="parameters" element="tns:RenameTabResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteListSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteList" />
+  </wsdl:message>
+  <wsdl:message name="DeleteListSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteListResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDataSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveData" />
+  </wsdl:message>
+  <wsdl:message name="SaveDataSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImageSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteImage" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImageSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadImageSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadImage" />
+  </wsdl:message>
+  <wsdl:message name="DownloadImageSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadImage" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetFileInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchEngineInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSearchEngineInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchEngineInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSearchEngineInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResolveUniqueKeysSoapIn">
+    <wsdl:part name="parameters" element="tns:ResolveUniqueKeys" />
+  </wsdl:message>
+  <wsdl:message name="ResolveUniqueKeysSoapOut">
+    <wsdl:part name="parameters" element="tns:ResolveUniqueKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="dataviewName" type="s:string" />
+    <wsdl:part name="delimitedParameterList" type="s:string" />
+    <wsdl:part name="offset" type="s:string" />
+    <wsdl:part name="limit" type="s:string" />
+    <wsdl:part name="options" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetLookupTableStatsHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="tableName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLookupTableStatsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLookupTableStatsHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLookupTableStatsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataParameterTemplateHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="dataviewName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataParameterTemplateHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ClearCacheHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="cacheName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ClearCacheHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SearchHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="query" type="s:string" />
+    <wsdl:part name="ignoreCase" type="s:string" />
+    <wsdl:part name="andTermsTogether" type="s:string" />
+    <wsdl:part name="indexList" type="s:string" />
+    <wsdl:part name="resolverName" type="s:string" />
+    <wsdl:part name="offset" type="s:string" />
+    <wsdl:part name="limit" type="s:string" />
+    <wsdl:part name="options" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ValidateLoginHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateLoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="targetUserName" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ChangeLanguageHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="newLanguageID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeLanguageHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RenameListHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="existingGroupName" type="s:string" />
+    <wsdl:part name="newGroupName" type="s:string" />
+    <wsdl:part name="existingTabName" type="s:string" />
+    <wsdl:part name="newTabName" type="s:string" />
+    <wsdl:part name="cooperatorID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RenameListHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RenameTabHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="existingTabName" type="s:string" />
+    <wsdl:part name="newTabName" type="s:string" />
+    <wsdl:part name="cooperatorID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RenameTabHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionHttpGetIn" />
+  <wsdl:message name="GetVersionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteListHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="groupName" type="s:string" />
+    <wsdl:part name="tabName" type="s:string" />
+    <wsdl:part name="cooperatorID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteListHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImageHttpGetIn">
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="imageFileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImageHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DownloadImageHttpGetIn">
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="appOrDocRelativePath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadImageHttpGetOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageHttpGetIn">
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="appOrDocRelativePath" type="s:string" />
+    <wsdl:part name="imageBytes" type="s1:StringArray" />
+    <wsdl:part name="createThumbnail" type="s:string" />
+    <wsdl:part name="overwriteIfExists" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFileInfoHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="groupName" type="s:string" />
+    <wsdl:part name="versionName" type="s:string" />
+    <wsdl:part name="onlyAvailable" type="s:string" />
+    <wsdl:part name="onlyLatest" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFileInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchEngineInfoHttpGetIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="enabledIndexesOnly" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchEngineInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="dataviewName" type="s:string" />
+    <wsdl:part name="delimitedParameterList" type="s:string" />
+    <wsdl:part name="offset" type="s:string" />
+    <wsdl:part name="limit" type="s:string" />
+    <wsdl:part name="options" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetLookupTableStatsHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="tableName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLookupTableStatsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLookupTableStatsHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLookupTableStatsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataParameterTemplateHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="dataviewName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataParameterTemplateHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ClearCacheHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="cacheName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ClearCacheHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SearchHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="query" type="s:string" />
+    <wsdl:part name="ignoreCase" type="s:string" />
+    <wsdl:part name="andTermsTogether" type="s:string" />
+    <wsdl:part name="indexList" type="s:string" />
+    <wsdl:part name="resolverName" type="s:string" />
+    <wsdl:part name="offset" type="s:string" />
+    <wsdl:part name="limit" type="s:string" />
+    <wsdl:part name="options" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ValidateLoginHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ValidateLoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="targetUserName" type="s:string" />
+    <wsdl:part name="newPassword" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangePasswordHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ChangeLanguageHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="newLanguageID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ChangeLanguageHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RenameListHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="existingGroupName" type="s:string" />
+    <wsdl:part name="newGroupName" type="s:string" />
+    <wsdl:part name="existingTabName" type="s:string" />
+    <wsdl:part name="newTabName" type="s:string" />
+    <wsdl:part name="cooperatorID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RenameListHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="RenameTabHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="existingTabName" type="s:string" />
+    <wsdl:part name="newTabName" type="s:string" />
+    <wsdl:part name="cooperatorID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="RenameTabHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionHttpPostIn" />
+  <wsdl:message name="GetVersionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteListHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="groupName" type="s:string" />
+    <wsdl:part name="tabName" type="s:string" />
+    <wsdl:part name="cooperatorID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteListHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImageHttpPostIn">
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="imageFileName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteImageHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DownloadImageHttpPostIn">
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="appOrDocRelativePath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DownloadImageHttpPostOut">
+    <wsdl:part name="Body" element="tns:base64Binary" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageHttpPostIn">
+    <wsdl:part name="userName" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="appOrDocRelativePath" type="s:string" />
+    <wsdl:part name="imageBytes" type="s1:StringArray" />
+    <wsdl:part name="createThumbnail" type="s:string" />
+    <wsdl:part name="overwriteIfExists" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UploadImageHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFileInfoHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="groupName" type="s:string" />
+    <wsdl:part name="versionName" type="s:string" />
+    <wsdl:part name="onlyAvailable" type="s:string" />
+    <wsdl:part name="onlyLatest" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFileInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchEngineInfoHttpPostIn">
+    <wsdl:part name="suppressExceptions" type="s:string" />
+    <wsdl:part name="enabledIndexesOnly" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetSearchEngineInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="GUISoap">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataSoapIn" />
+      <wsdl:output message="tns:GetDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLookupTableStats">
+      <wsdl:input message="tns:GetLookupTableStatsSoapIn" />
+      <wsdl:output message="tns:GetLookupTableStatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLookupTableStats">
+      <wsdl:input message="tns:GetAllLookupTableStatsSoapIn" />
+      <wsdl:output message="tns:GetAllLookupTableStatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataParameterTemplate">
+      <wsdl:input message="tns:GetDataParameterTemplateSoapIn" />
+      <wsdl:output message="tns:GetDataParameterTemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <wsdl:input message="tns:ClearCacheSoapIn" />
+      <wsdl:output message="tns:ClearCacheSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferOwnership">
+      <wsdl:input message="tns:TransferOwnershipSoapIn" />
+      <wsdl:output message="tns:TransferOwnershipSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input message="tns:SearchSoapIn" />
+      <wsdl:output message="tns:SearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <wsdl:input message="tns:ValidateLoginSoapIn" />
+      <wsdl:output message="tns:ValidateLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordSoapIn" />
+      <wsdl:output message="tns:ChangePasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLanguage">
+      <wsdl:input message="tns:ChangeLanguageSoapIn" />
+      <wsdl:output message="tns:ChangeLanguageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameList">
+      <wsdl:input message="tns:RenameListSoapIn" />
+      <wsdl:output message="tns:RenameListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameTab">
+      <wsdl:input message="tns:RenameTabSoapIn" />
+      <wsdl:output message="tns:RenameTabSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:input message="tns:GetVersionSoapIn" />
+      <wsdl:output message="tns:GetVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteList">
+      <wsdl:input message="tns:DeleteListSoapIn" />
+      <wsdl:output message="tns:DeleteListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveData">
+      <wsdl:input message="tns:SaveDataSoapIn" />
+      <wsdl:output message="tns:SaveDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImage">
+      <wsdl:input message="tns:DeleteImageSoapIn" />
+      <wsdl:output message="tns:DeleteImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadImage">
+      <wsdl:input message="tns:DownloadImageSoapIn" />
+      <wsdl:output message="tns:DownloadImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImage">
+      <wsdl:input message="tns:UploadImageSoapIn" />
+      <wsdl:output message="tns:UploadImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfo">
+      <wsdl:input message="tns:GetFileInfoSoapIn" />
+      <wsdl:output message="tns:GetFileInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchEngineInfo">
+      <wsdl:input message="tns:GetSearchEngineInfoSoapIn" />
+      <wsdl:output message="tns:GetSearchEngineInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResolveUniqueKeys">
+      <wsdl:input message="tns:ResolveUniqueKeysSoapIn" />
+      <wsdl:output message="tns:ResolveUniqueKeysSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="GUIHttpGet">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataHttpGetIn" />
+      <wsdl:output message="tns:GetDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLookupTableStats">
+      <wsdl:input message="tns:GetLookupTableStatsHttpGetIn" />
+      <wsdl:output message="tns:GetLookupTableStatsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLookupTableStats">
+      <wsdl:input message="tns:GetAllLookupTableStatsHttpGetIn" />
+      <wsdl:output message="tns:GetAllLookupTableStatsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataParameterTemplate">
+      <wsdl:input message="tns:GetDataParameterTemplateHttpGetIn" />
+      <wsdl:output message="tns:GetDataParameterTemplateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <wsdl:input message="tns:ClearCacheHttpGetIn" />
+      <wsdl:output message="tns:ClearCacheHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input message="tns:SearchHttpGetIn" />
+      <wsdl:output message="tns:SearchHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <wsdl:input message="tns:ValidateLoginHttpGetIn" />
+      <wsdl:output message="tns:ValidateLoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordHttpGetIn" />
+      <wsdl:output message="tns:ChangePasswordHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLanguage">
+      <wsdl:input message="tns:ChangeLanguageHttpGetIn" />
+      <wsdl:output message="tns:ChangeLanguageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameList">
+      <wsdl:input message="tns:RenameListHttpGetIn" />
+      <wsdl:output message="tns:RenameListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameTab">
+      <wsdl:input message="tns:RenameTabHttpGetIn" />
+      <wsdl:output message="tns:RenameTabHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:input message="tns:GetVersionHttpGetIn" />
+      <wsdl:output message="tns:GetVersionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteList">
+      <wsdl:input message="tns:DeleteListHttpGetIn" />
+      <wsdl:output message="tns:DeleteListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImage">
+      <wsdl:input message="tns:DeleteImageHttpGetIn" />
+      <wsdl:output message="tns:DeleteImageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadImage">
+      <wsdl:input message="tns:DownloadImageHttpGetIn" />
+      <wsdl:output message="tns:DownloadImageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImage">
+      <wsdl:input message="tns:UploadImageHttpGetIn" />
+      <wsdl:output message="tns:UploadImageHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfo">
+      <wsdl:input message="tns:GetFileInfoHttpGetIn" />
+      <wsdl:output message="tns:GetFileInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchEngineInfo">
+      <wsdl:input message="tns:GetSearchEngineInfoHttpGetIn" />
+      <wsdl:output message="tns:GetSearchEngineInfoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="GUIHttpPost">
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataHttpPostIn" />
+      <wsdl:output message="tns:GetDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLookupTableStats">
+      <wsdl:input message="tns:GetLookupTableStatsHttpPostIn" />
+      <wsdl:output message="tns:GetLookupTableStatsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLookupTableStats">
+      <wsdl:input message="tns:GetAllLookupTableStatsHttpPostIn" />
+      <wsdl:output message="tns:GetAllLookupTableStatsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataParameterTemplate">
+      <wsdl:input message="tns:GetDataParameterTemplateHttpPostIn" />
+      <wsdl:output message="tns:GetDataParameterTemplateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <wsdl:input message="tns:ClearCacheHttpPostIn" />
+      <wsdl:output message="tns:ClearCacheHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <wsdl:input message="tns:SearchHttpPostIn" />
+      <wsdl:output message="tns:SearchHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <wsdl:input message="tns:ValidateLoginHttpPostIn" />
+      <wsdl:output message="tns:ValidateLoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input message="tns:ChangePasswordHttpPostIn" />
+      <wsdl:output message="tns:ChangePasswordHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLanguage">
+      <wsdl:input message="tns:ChangeLanguageHttpPostIn" />
+      <wsdl:output message="tns:ChangeLanguageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameList">
+      <wsdl:input message="tns:RenameListHttpPostIn" />
+      <wsdl:output message="tns:RenameListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenameTab">
+      <wsdl:input message="tns:RenameTabHttpPostIn" />
+      <wsdl:output message="tns:RenameTabHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:input message="tns:GetVersionHttpPostIn" />
+      <wsdl:output message="tns:GetVersionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteList">
+      <wsdl:input message="tns:DeleteListHttpPostIn" />
+      <wsdl:output message="tns:DeleteListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImage">
+      <wsdl:input message="tns:DeleteImageHttpPostIn" />
+      <wsdl:output message="tns:DeleteImageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadImage">
+      <wsdl:input message="tns:DownloadImageHttpPostIn" />
+      <wsdl:output message="tns:DownloadImageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadImage">
+      <wsdl:input message="tns:UploadImageHttpPostIn" />
+      <wsdl:output message="tns:UploadImageHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfo">
+      <wsdl:input message="tns:GetFileInfoHttpPostIn" />
+      <wsdl:output message="tns:GetFileInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchEngineInfo">
+      <wsdl:input message="tns:GetSearchEngineInfoHttpPostIn" />
+      <wsdl:output message="tns:GetSearchEngineInfoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GUISoap" type="tns:GUISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLookupTableStats">
+      <soap:operation soapAction="http://tempuri.org/GetLookupTableStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLookupTableStats">
+      <soap:operation soapAction="http://tempuri.org/GetAllLookupTableStats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataParameterTemplate">
+      <soap:operation soapAction="http://tempuri.org/GetDataParameterTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <soap:operation soapAction="http://tempuri.org/ClearCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferOwnership">
+      <soap:operation soapAction="http://tempuri.org/TransferOwnership" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap:operation soapAction="http://tempuri.org/Search" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <soap:operation soapAction="http://tempuri.org/ValidateLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLanguage">
+      <soap:operation soapAction="http://tempuri.org/ChangeLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameList">
+      <soap:operation soapAction="http://tempuri.org/RenameList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameTab">
+      <soap:operation soapAction="http://tempuri.org/RenameTab" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="http://tempuri.org/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteList">
+      <soap:operation soapAction="http://tempuri.org/DeleteList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveData">
+      <soap:operation soapAction="http://tempuri.org/SaveData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImage">
+      <soap:operation soapAction="http://tempuri.org/DeleteImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadImage">
+      <soap:operation soapAction="http://tempuri.org/DownloadImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImage">
+      <soap:operation soapAction="http://tempuri.org/UploadImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfo">
+      <soap:operation soapAction="http://tempuri.org/GetFileInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchEngineInfo">
+      <soap:operation soapAction="http://tempuri.org/GetSearchEngineInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResolveUniqueKeys">
+      <soap:operation soapAction="http://tempuri.org/ResolveUniqueKeys" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GUISoap12" type="tns:GUISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap12:operation soapAction="http://tempuri.org/GetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLookupTableStats">
+      <soap12:operation soapAction="http://tempuri.org/GetLookupTableStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLookupTableStats">
+      <soap12:operation soapAction="http://tempuri.org/GetAllLookupTableStats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataParameterTemplate">
+      <soap12:operation soapAction="http://tempuri.org/GetDataParameterTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <soap12:operation soapAction="http://tempuri.org/ClearCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferOwnership">
+      <soap12:operation soapAction="http://tempuri.org/TransferOwnership" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <soap12:operation soapAction="http://tempuri.org/Search" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <soap12:operation soapAction="http://tempuri.org/ValidateLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://tempuri.org/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLanguage">
+      <soap12:operation soapAction="http://tempuri.org/ChangeLanguage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameList">
+      <soap12:operation soapAction="http://tempuri.org/RenameList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameTab">
+      <soap12:operation soapAction="http://tempuri.org/RenameTab" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap12:operation soapAction="http://tempuri.org/GetVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteList">
+      <soap12:operation soapAction="http://tempuri.org/DeleteList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveData">
+      <soap12:operation soapAction="http://tempuri.org/SaveData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImage">
+      <soap12:operation soapAction="http://tempuri.org/DeleteImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadImage">
+      <soap12:operation soapAction="http://tempuri.org/DownloadImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImage">
+      <soap12:operation soapAction="http://tempuri.org/UploadImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetFileInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchEngineInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetSearchEngineInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResolveUniqueKeys">
+      <soap12:operation soapAction="http://tempuri.org/ResolveUniqueKeys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GUIHttpGet" type="tns:GUIHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetData">
+      <http:operation location="/GetData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLookupTableStats">
+      <http:operation location="/GetLookupTableStats" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLookupTableStats">
+      <http:operation location="/GetAllLookupTableStats" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataParameterTemplate">
+      <http:operation location="/GetDataParameterTemplate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <http:operation location="/ClearCache" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <http:operation location="/Search" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <http:operation location="/ValidateLogin" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLanguage">
+      <http:operation location="/ChangeLanguage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameList">
+      <http:operation location="/RenameList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameTab">
+      <http:operation location="/RenameTab" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <http:operation location="/GetVersion" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteList">
+      <http:operation location="/DeleteList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImage">
+      <http:operation location="/DeleteImage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadImage">
+      <http:operation location="/DownloadImage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImage">
+      <http:operation location="/UploadImage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfo">
+      <http:operation location="/GetFileInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchEngineInfo">
+      <http:operation location="/GetSearchEngineInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GUIHttpPost" type="tns:GUIHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetData">
+      <http:operation location="/GetData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLookupTableStats">
+      <http:operation location="/GetLookupTableStats" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLookupTableStats">
+      <http:operation location="/GetAllLookupTableStats" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataParameterTemplate">
+      <http:operation location="/GetDataParameterTemplate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <http:operation location="/ClearCache" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Search">
+      <http:operation location="/Search" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateLogin">
+      <http:operation location="/ValidateLogin" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeLanguage">
+      <http:operation location="/ChangeLanguage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameList">
+      <http:operation location="/RenameList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenameTab">
+      <http:operation location="/RenameTab" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <http:operation location="/GetVersion" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteList">
+      <http:operation location="/DeleteList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImage">
+      <http:operation location="/DeleteImage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadImage">
+      <http:operation location="/DownloadImage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadImage">
+      <http:operation location="/UploadImage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfo">
+      <http:operation location="/GetFileInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSearchEngineInfo">
+      <http:operation location="/GetSearchEngineInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GUI">
+    <wsdl:port name="GUISoap" binding="tns:GUISoap">
+      <soap:address location="http://test.grin-global.org/gringlobal/gui.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GUISoap12" binding="tns:GUISoap12">
+      <soap12:address location="http://test.grin-global.org/gringlobal/gui.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GUIHttpGet" binding="tns:GUIHttpGet">
+      <http:address location="http://test.grin-global.org/gringlobal/gui.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GUIHttpPost" binding="tns:GUIHttpPost">
+      <http:address location="http://test.grin-global.org/gringlobal/gui.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
