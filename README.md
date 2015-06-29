@@ -11,8 +11,9 @@ This repository contain the source code of GRIN-Global Curator Tool and GRIN-Glo
 
 ### How do I get set up? ###
 
+* [Install GRIN-Global server components](http://www.ars-grin.gov/npgs/gringlobal/docs/gg_installation_guide.pdf).
 * In order to work with **End User Components** source code, you need to have installed ***Microsoft Visual Studio 2012*** or you can try with ***VS Express Desktop***.
-* Configuration
+
 * Dependencies
 * Database configuration
 * How to run tests
