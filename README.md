@@ -7,11 +7,7 @@ Agricultural Research Service**, **Bioversity International**, and the **Global 
 * End User Components
 * Server Components
  
-In this repository you can find the GRIN-Global Curator Tool and GRIN-Global Search tool as part of GRIN-Global **End User Components**
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+This repository contain the source code of GRIN-Global Curator Tool and GRIN-Global Search tool,***version 1.9.6.41*** . This components are part of GRIN-Global **End User Components**.
 
 ### How do I get set up? ###
 
