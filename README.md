@@ -9,7 +9,7 @@ Agricultural Research Service**, **Bioversity International**, and the **Global 
 * End User Components
 * Server Components
  
-This repository contain the source code of GRIN-Global Curator Tool and GRIN-Global Search tool,***version 1.9.6.41*** . This components are part of GRIN-Global **End User Components**.
+This repository contain the source code of GRIN-Global Curator Tool and GRIN-Global Search tool,***version 1.9.6.41*** . These components are part of GRIN-Global **End User Components**.
 
 ### How do I get set up? ###
 
